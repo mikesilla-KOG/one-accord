@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Join Us – OneAccord</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            navy: '#1E3A8A',
+            gold:  '#D4A017',
+          },
+          fontFamily: {
+            serif: ['"Georgia"', 'Cambria', 'serif'],
+          },
+        }
+      }
+    }
+  </script>
+  <style>
+    body { font-family: Georgia, Cambria, serif; background-color: #FAFAF7; }
+    input, textarea, select {
+      font-family: Georgia, Cambria, serif;
+    }
+  </style>
+</head>
+<body class="text-gray-800">
+
+  <!-- Navigation -->
+  <nav class="bg-navy sticky top-0 z-50 shadow-lg">
+    <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between flex-wrap gap-4">
+      <a href="index.html" class="flex items-center gap-2 text-white font-bold text-lg tracking-wide">
+        <span class="text-gold text-2xl">🕊</span>
+        <span>OneAccord</span>
+      </a>
+      <div class="flex flex-wrap gap-6 text-sm">
+        <a href="index.html"          class="text-white hover:text-gold transition">Home</a>
+        <a href="vision.html"         class="text-white hover:text-gold transition">The Vision</a>
+        <a href="service-order.html"  class="text-white hover:text-gold transition">Service Order</a>
+        <a href="join.html"           class="text-gold font-semibold">Join Us</a>
+        <a href="leaders.html"        class="text-white hover:text-gold transition">Leaders</a>
+        <a href="calendar.html"       class="text-white hover:text-gold transition">Calendar</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Header -->
+  <section class="bg-navy text-white text-center py-20 px-6">
+    <p class="text-gold tracking-widest uppercase text-xs mb-4">June 24–26, 2026</p>
+    <h1 class="text-5xl font-bold mb-4">Join Us</h1>
+    <p class="text-blue-200 text-lg max-w-xl mx-auto italic">
+      "And they were all together in one place." — Acts 2:1
+    </p>
+  </section>
+
+  <!-- Forms Section -->
+  <section class="max-w-5xl mx-auto py-16 px-6">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
+
+      <!-- Church / Pastor Form -->
+      <div class="bg-white rounded-2xl shadow-sm border border-gray-200 p-8">
+        <div class="text-3xl mb-4">⛪</div>
+        <h2 class="text-navy text-xl font-bold mb-2">Churches &amp; Pastors</h2>
+        <p class="text-gray-500 text-sm mb-6">Register your church's interest or commitment to attend June 24–26, 2026.</p>
+
+        <!--
+          POST target: Google Apps Script Web App URL
+          Replace the action URL below with your deployed Apps Script Web App URL.
+          The script should write submissions to a Google Sheet (see Integration Notes below).
+        -->
+        <form
+          action="https://script.google.com/macros/s/YOUR_APPS_SCRIPT_ID/exec"
+          method="POST"
+          class="space-y-4"
+        >
+          <!-- Hidden field to identify form type for Google Sheets routing -->
+          <input type="hidden" name="formType" value="church" />
+
+          <div>
+            <label class="block text-sm text-navy font-semibold mb-1">Pastor / Leader Name <span class="text-red-400">*</span></label>
+            <input type="text" name="pastorName" required
+              class="w-full border border-gray-300 rounded-lg px-4 py-2 text-sm focus:outline-none focus:border-navy focus:ring-1 focus:ring-navy"
+              placeholder="Rev. John Smith" />
+          </div>
+
+          <div>
+            <label class="block text-sm text-navy font-semibold mb-1">Church Name <span class="text-red-400">*</span></label>
+            <input type="text" name="churchName" required
+              class="w-full border border-gray-300 rounded-lg px-4 py-2 text-sm focus:outline-none focus:border-navy focus:ring-1 focus:ring-navy"
+              placeholder="Grace Community Church" />
+          </div>
+
+          <div>
+            <label class="block text-sm text-navy font-semibold mb-1">City, CA <span class="text-red-400">*</span></label>
+            <input type="text" name="city" required
+              class="w-full border border-gray-300 rounded-lg px-4 py-2 text-sm focus:outline-none focus:border-navy focus:ring-1 focus:ring-navy"
+              placeholder="Los Angeles, CA" />
+          </div>
+
+          <div>
+            <label class="block text-sm text-navy font-semibold mb-1">Email <span class="text-red-400">*</span></label>
+            <input type="email" name="email" required
+              class="w-full border border-gray-300 rounded-lg px-4 py-2 text-sm focus:outline-none focus:border-navy focus:ring-1 focus:ring-navy"
+              placeholder="pastor@church.org" />
+          </div>
+
+          <div>
+            <label class="block text-sm text-navy font-semibold mb-1">Estimated Attendees</label>
+            <input type="number" name="attendees" min="1"
+              class="w-full border border-gray-300 rounded-lg px-4 py-2 text-sm focus:outline-none focus:border-navy focus:ring-1 focus:ring-navy"
+              placeholder="20" />
+          </div>
+
+          <div>
+            <label class="block text-sm text-navy font-semibold mb-2">I want to…</label>
+            <div class="space-y-2 text-sm text-gray-700">
+              <label class="flex items-center gap-2">
+                <input type="checkbox" name="attend" value="yes" class="accent-navy" />
+                Attend June 24–26, 2026
+              </label>
+              <label class="flex items-center gap-2">
+                <input type="checkbox" name="host" value="yes" class="accent-navy" />
+                Help host / bring my team
+              </label>
+              <label class="flex items-center gap-2">
+                <input type="checkbox" name="music" value="yes" class="accent-navy" />
+                Bring musicians / worship team
+              </label>
+            </div>
+          </div>
+
+          <div>
+            <label class="block text-sm text-navy font-semibold mb-1">Message (optional)</label>
+            <textarea name="message" rows="3"
+              class="w-full border border-gray-300 rounded-lg px-4 py-2 text-sm focus:outline-none focus:border-navy focus:ring-1 focus:ring-navy resize-none"
+              placeholder="Any questions or notes…"></textarea>
+          </div>
+
+          <button type="submit"
+            class="w-full bg-navy text-white font-bold py-3 rounded-full hover:bg-blue-800 transition shadow-md">
+            Submit Church Registration
+          </button>
+        </form>
+      </div>
+
+      <!-- Individual Form -->
+      <div class="bg-white rounded-2xl shadow-sm border border-gray-200 p-8">
+        <div class="text-3xl mb-4">🙏</div>
+        <h2 class="text-navy text-xl font-bold mb-2">Individuals</h2>
+        <p class="text-gray-500 text-sm mb-6">Register your personal interest in attending June 24–26, 2026.</p>
+
+        <!--
+          POST target: Google Apps Script Web App URL
+          Replace the action URL below with your deployed Apps Script Web App URL.
+          The script should write individual registrations to a separate Google Sheet tab.
+        -->
+        <form
+          action="https://script.google.com/macros/s/YOUR_APPS_SCRIPT_ID/exec"
+          method="POST"
+          class="space-y-4"
+        >
+          <!-- Hidden field to identify form type for Google Sheets routing -->
+          <input type="hidden" name="formType" value="individual" />
+
+          <div>
+            <label class="block text-sm text-navy font-semibold mb-1">Your Name <span class="text-red-400">*</span></label>
+            <input type="text" name="fullName" required
+              class="w-full border border-gray-300 rounded-lg px-4 py-2 text-sm focus:outline-none focus:border-navy focus:ring-1 focus:ring-navy"
+              placeholder="Jane Doe" />
+          </div>
+
+          <div>
+            <label class="block text-sm text-navy font-semibold mb-1">Email <span class="text-red-400">*</span></label>
+            <input type="email" name="email" required
+              class="w-full border border-gray-300 rounded-lg px-4 py-2 text-sm focus:outline-none focus:border-navy focus:ring-1 focus:ring-navy"
+              placeholder="you@example.com" />
+          </div>
+
+          <div>
+            <label class="block text-sm text-navy font-semibold mb-1">City, CA</label>
+            <input type="text" name="city"
+              class="w-full border border-gray-300 rounded-lg px-4 py-2 text-sm focus:outline-none focus:border-navy focus:ring-1 focus:ring-navy"
+              placeholder="San Diego, CA" />
+          </div>
+
+          <div>
+            <label class="block text-sm text-navy font-semibold mb-1">Home Church (optional)</label>
+            <input type="text" name="homeChurch"
+              class="w-full border border-gray-300 rounded-lg px-4 py-2 text-sm focus:outline-none focus:border-navy focus:ring-1 focus:ring-navy"
+              placeholder="My Church Name" />
+          </div>
+
+          <div>
+            <label class="block text-sm text-navy font-semibold mb-2">I want to…</label>
+            <div class="space-y-2 text-sm text-gray-700">
+              <label class="flex items-center gap-2">
+                <input type="checkbox" name="attend" value="yes" class="accent-navy" />
+                Attend June 24–26, 2026
+              </label>
+              <label class="flex items-center gap-2">
+                <input type="checkbox" name="helpHost" value="yes" class="accent-navy" />
+                Help host / volunteer
+              </label>
+              <label class="flex items-center gap-2">
+                <input type="checkbox" name="updates" value="yes" class="accent-navy" checked />
+                Receive email updates
+              </label>
+            </div>
+          </div>
+
+          <div>
+            <label class="block text-sm text-navy font-semibold mb-1">Message (optional)</label>
+            <textarea name="message" rows="3"
+              class="w-full border border-gray-300 rounded-lg px-4 py-2 text-sm focus:outline-none focus:border-navy focus:ring-1 focus:ring-navy resize-none"
+              placeholder="Any questions or notes…"></textarea>
+          </div>
+
+          <button type="submit"
+            class="w-full bg-gold text-navy font-bold py-3 rounded-full hover:brightness-110 transition shadow-md">
+            Submit Individual Registration
+          </button>
+        </form>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Integration Note (hidden from visitors, visible in source for developers) -->
+  <!--
+    GOOGLE SHEETS INTEGRATION NOTES:
+    - Deploy a Google Apps Script Web App that accepts POST requests.
+    - The script should check the "formType" field to route:
+        "church"     → Sheet tab: "Church Registrations"
+        "individual" → Sheet tab: "Individual Registrations"
+    - Fields to capture (all forms): timestamp, formType, email, city, message, checkboxes
+    - Church-specific: pastorName, churchName, attendees, attend, host, music
+    - Individual-specific: fullName, homeChurch, attend, helpHost, updates
+    - Replace "YOUR_APPS_SCRIPT_ID" in both form action URLs above with your real deployment ID.
+  -->
+
+  <!-- Footer -->
+  <footer class="bg-navy text-white text-center py-10 px-6">
+    <p class="text-gold text-2xl mb-2">🕊</p>
+    <p class="font-bold text-lg mb-1">OneAccord</p>
+    <p class="text-blue-200 text-sm italic mb-4">One Accord – In Spirit and Truth</p>
+    <p class="text-blue-300 text-xs">California Churches · June 24–26, 2026</p>
+  </footer>
+
+</body>
+</html>
