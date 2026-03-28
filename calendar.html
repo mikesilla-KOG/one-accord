@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Calendar – OneAccord</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            navy: '#1E3A8A',
+            gold:  '#D4A017',
+          },
+          fontFamily: {
+            serif: ['"Georgia"', 'Cambria', 'serif'],
+          },
+        }
+      }
+    }
+  </script>
+  <style>
+    body { font-family: Georgia, Cambria, serif; background-color: #FAFAF7; }
+  </style>
+</head>
+<body class="text-gray-800">
+
+  <!-- Navigation -->
+  <nav class="bg-navy sticky top-0 z-50 shadow-lg">
+    <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between flex-wrap gap-4">
+      <a href="index.html" class="flex items-center gap-2 text-white font-bold text-lg tracking-wide">
+        <span class="text-gold text-2xl">🕊</span>
+        <span>OneAccord</span>
+      </a>
+      <div class="flex flex-wrap gap-6 text-sm">
+        <a href="index.html"          class="text-white hover:text-gold transition">Home</a>
+        <a href="vision.html"         class="text-white hover:text-gold transition">The Vision</a>
+        <a href="service-order.html"  class="text-white hover:text-gold transition">Service Order</a>
+        <a href="join.html"           class="text-white hover:text-gold transition">Join Us</a>
+        <a href="leaders.html"        class="text-white hover:text-gold transition">Leaders</a>
+        <a href="calendar.html"       class="text-gold font-semibold">Calendar</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Header -->
+  <section class="bg-navy text-white text-center py-20 px-6">
+    <p class="text-gold tracking-widest uppercase text-xs mb-4">Save the Dates</p>
+    <h1 class="text-5xl font-bold mb-4">Calendar</h1>
+    <p class="text-blue-200 text-lg max-w-xl mx-auto italic">
+      Mark your calendar. Clear your schedule. Come expectant.
+    </p>
+  </section>
+
+  <!-- Main Event Highlight -->
+  <section class="max-w-3xl mx-auto py-16 px-6">
+
+    <div class="bg-white border-2 border-gold rounded-2xl shadow-md overflow-hidden">
+      <!-- Event Header -->
+      <div class="bg-navy text-white px-8 py-6 flex items-center gap-4">
+        <span class="text-gold text-4xl">🕊</span>
+        <div>
+          <p class="text-gold text-xs uppercase tracking-widest mb-1">Main Gathering · California</p>
+          <h2 class="text-2xl font-bold">OneAccord Gathering</h2>
+        </div>
+      </div>
+
+      <!-- Event Details -->
+      <div class="px-8 py-6 space-y-5">
+
+        <div class="flex items-start gap-4">
+          <span class="text-gold text-xl mt-0.5">📅</span>
+          <div>
+            <p class="text-navy font-bold">June 24–26, 2026</p>
+            <p class="text-gray-500 text-sm">Wednesday, Thursday &amp; Friday</p>
+          </div>
+        </div>
+
+        <div class="flex items-start gap-4">
+          <span class="text-gold text-xl mt-0.5">📍</span>
+          <div>
+            <p class="text-navy font-bold">Location</p>
+            <p class="text-gray-500 text-sm">California — exact venue announced to registered attendees</p>
+          </div>
+        </div>
+
+        <div class="flex items-start gap-4">
+          <span class="text-gold text-xl mt-0.5">⏱</span>
+          <div>
+            <p class="text-navy font-bold">Duration per gathering</p>
+            <p class="text-gray-500 text-sm">~1 hour 20 minutes + unlimited fellowship</p>
+          </div>
+        </div>
+
+        <div class="flex items-start gap-4">
+          <span class="text-gold text-xl mt-0.5">✉️</span>
+          <div>
+            <p class="text-navy font-bold">Who is invited</p>
+            <p class="text-gray-500 text-sm">All California churches, pastors, musicians, and believers</p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Add to Calendar Buttons -->
+      <div class="px-8 pb-8">
+        <p class="text-xs text-gray-400 uppercase tracking-widest mb-4">Add to Calendar</p>
+        <div class="flex flex-col sm:flex-row gap-3">
+
+          <!--
+            Google Calendar link — update dates/title/details/location when finalized.
+            Format: https://calendar.google.com/calendar/render?action=TEMPLATE
+              &text=Event+Name
+              &dates=YYYYMMDD/YYYYMMDD (all-day, end date is exclusive)
+              &details=Description
+              &location=Location
+          -->
+          <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=OneAccord+Gathering&dates=20260624/20260627&details=California+churches+gathering+in+one+accord+-+June+24-26,+2026.+OneAccord.&location=California"
+             target="_blank" rel="noopener noreferrer"
+             class="flex items-center gap-2 bg-navy text-white text-sm font-semibold px-5 py-3 rounded-full hover:bg-blue-800 transition shadow">
+            <span>📅</span> Add to Google Calendar
+          </a>
+
+          <!--
+            .ics download for Apple Calendar, Outlook, etc.
+            Update the href to point to a real .ics file once finalized.
+            Placeholder: generates a simple .ics via data URI.
+          -->
+          <a href="data:text/calendar;charset=utf8,BEGIN:VCALENDAR%0AVERSION:2.0%0APRODID:-//OneAccord//EN%0ABEGIN:VEVENT%0ADTSTART;VALUE=DATE:20260624%0ADTEND;VALUE=DATE:20260627%0ASUMMARY:OneAccord%20Gathering%0ADESCRIPTION:California%20churches%20gathering%20in%20one%20accord%20-%20June%2024-26%2C%202026.%0ALOCATION:California%0AEND:VEVENT%0AEND:VCALENDAR"
+             download="OneAccord-June-2026.ics"
+             class="flex items-center gap-2 border border-navy text-navy text-sm font-semibold px-5 py-3 rounded-full hover:bg-navy/5 transition">
+            <span>📥</span> Download .ics (Apple / Outlook)
+          </a>
+
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- Schedule At A Glance -->
+  <section class="bg-white py-16 px-6">
+    <div class="max-w-3xl mx-auto">
+      <h2 class="text-center text-navy text-2xl font-bold mb-10">Three Days At A Glance</h2>
+      <div class="space-y-4">
+
+        <div class="flex items-center gap-6 border border-gray-200 rounded-2xl p-6">
+          <div class="text-center min-w-[70px]">
+            <p class="text-gold font-bold text-xl">Jun 24</p>
+            <p class="text-gray-400 text-xs">Wednesday</p>
+          </div>
+          <div class="h-10 w-px bg-gold/30"></div>
+          <div>
+            <p class="text-navy font-semibold">Evening Gathering</p>
+            <p class="text-gray-500 text-sm">Praise · Worship · Preaching · Q&amp;A · Fellowship</p>
+          </div>
+        </div>
+
+        <div class="flex items-center gap-6 border border-gray-200 rounded-2xl p-6">
+          <div class="text-center min-w-[70px]">
+            <p class="text-gold font-bold text-xl">Jun 25</p>
+            <p class="text-gray-400 text-xs">Thursday</p>
+          </div>
+          <div class="h-10 w-px bg-gold/30"></div>
+          <div>
+            <p class="text-navy font-semibold">Evening Gathering</p>
+            <p class="text-gray-500 text-sm">Praise · Worship · Preaching · Q&amp;A · Fellowship</p>
+          </div>
+        </div>
+
+        <div class="flex items-center gap-6 border-2 border-gold rounded-2xl p-6 bg-gold/5">
+          <div class="text-center min-w-[70px]">
+            <p class="text-gold font-bold text-xl">Jun 26</p>
+            <p class="text-gray-400 text-xs">Friday</p>
+          </div>
+          <div class="h-10 w-px bg-gold/30"></div>
+          <div>
+            <p class="text-navy font-semibold">Closing Gathering</p>
+            <p class="text-gray-500 text-sm">Praise · Worship · Preaching · Q&amp;A · Extended Fellowship &amp; Food</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="text-center py-16 px-6">
+    <h2 class="text-2xl font-bold text-navy mb-4">Will You Be There?</h2>
+    <p class="text-gray-500 mb-8">Register now — churches and individuals welcome.</p>
+    <a href="join.html" class="bg-gold text-navy font-bold px-8 py-3 rounded-full hover:brightness-110 transition shadow-md">Register Interest</a>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-navy text-white text-center py-10 px-6">
+    <p class="text-gold text-2xl mb-2">🕊</p>
+    <p class="font-bold text-lg mb-1">OneAccord</p>
+    <p class="text-blue-200 text-sm italic mb-4">One Accord – In Spirit and Truth</p>
+    <p class="text-blue-300 text-xs">California Churches · June 24–26, 2026</p>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>OneAccord – In Spirit and Truth</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            navy: '#1E3A8A',
+            gold:  '#D4A017',
+          },
+          fontFamily: {
+            serif: ['"Georgia"', 'Cambria', 'serif'],
+          },
+        }
+      }
+    }
+  </script>
+  <style>
+    body { font-family: Georgia, Cambria, serif; background-color: #FAFAF7; }
+    .hero-bg {
+      background: linear-gradient(160deg, #1E3A8A 0%, #1e3a8a 60%, #2a4fa0 100%);
+    }
+    .gold-line { border-color: #D4A017; }
+    .vine-accent::before {
+      content: '❧';
+      color: #D4A017;
+      opacity: 0.5;
+      font-size: 1.4rem;
+      margin-right: 0.5rem;
+    }
+  </style>
+</head>
+<body class="text-gray-800">
+
+  <!-- Navigation -->
+  <nav class="bg-navy sticky top-0 z-50 shadow-lg">
+    <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between flex-wrap gap-4">
+      <a href="index.html" class="flex items-center gap-2 text-white font-bold text-lg tracking-wide">
+        <span class="text-gold text-2xl">🕊</span>
+        <span>OneAccord</span>
+      </a>
+      <div class="flex flex-wrap gap-6 text-sm">
+        <a href="index.html"          class="text-gold font-semibold">Home</a>
+        <a href="vision.html"         class="text-white hover:text-gold transition">The Vision</a>
+        <a href="service-order.html"  class="text-white hover:text-gold transition">Service Order</a>
+        <a href="join.html"           class="text-white hover:text-gold transition">Join Us</a>
+        <a href="leaders.html"        class="text-white hover:text-gold transition">Leaders</a>
+        <a href="calendar.html"       class="text-white hover:text-gold transition">Calendar</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero-bg text-white text-center py-32 px-6 relative overflow-hidden">
+    <!-- Dove watermark -->
+    <div class="absolute inset-0 flex items-center justify-center pointer-events-none select-none opacity-5 text-white" style="font-size:22rem; line-height:1;">🕊</div>
+
+    <div class="relative z-10 max-w-3xl mx-auto">
+      <p class="text-gold tracking-[0.3em] uppercase text-sm mb-4">California Churches</p>
+      <h1 class="text-6xl md:text-7xl font-bold mb-4 tracking-tight">OneAccord</h1>
+      <p class="text-xl md:text-2xl text-blue-100 italic mb-12">One Accord – In Spirit and Truth</p>
+
+      <!-- Key Date Banner -->
+      <div class="inline-block border-2 border-gold rounded-xl px-8 py-5 bg-white/10 backdrop-blur-sm mb-10">
+        <p class="text-gold text-sm uppercase tracking-widest mb-1">Main Gathering</p>
+        <p class="text-3xl font-bold text-white">June 24–26, 2026</p>
+        <p class="text-blue-200 text-sm mt-1">Wednesday – Friday</p>
+      </div>
+
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="join.html" class="bg-gold text-navy font-bold px-8 py-3 rounded-full hover:brightness-110 transition text-base shadow-lg">Register Interest</a>
+        <a href="calendar.html" class="border border-white text-white px-8 py-3 rounded-full hover:bg-white/10 transition text-base">Add to Calendar</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Scripture Banner -->
+  <div class="bg-gold text-navy text-center py-4 px-6">
+    <p class="text-sm md:text-base italic font-semibold">"When you come together, each of you has a hymn, a word of instruction, a revelation…" — 1 Corinthians 14:26</p>
+  </div>
+
+  <!-- Invitation -->
+  <section class="max-w-3xl mx-auto text-center py-20 px-6">
+    <span class="text-gold text-3xl">🕊</span>
+    <h2 class="text-3xl font-bold text-navy mt-4 mb-4">A Holy Gathering</h2>
+    <p class="text-gray-600 text-lg leading-relaxed mb-2">
+      Gatherings where the Holy Spirit leads — through order, participation, and expectation.
+    </p>
+    <p class="text-gray-500 leading-relaxed">
+      California churches coming together in unity, worship, and humble service — following the pattern of the early church.
+    </p>
+    <div class="mt-8 border-t border-gold/30 pt-8">
+      <p class="text-navy text-sm tracking-widest uppercase font-semibold">Acts 2:1 · 1 Corinthians 14 · Psalm 150</p>
+    </div>
+  </section>
+
+  <!-- Action Cards -->
+  <section class="bg-white py-16 px-6">
+    <div class="max-w-5xl mx-auto">
+      <h2 class="text-center text-navy text-2xl font-bold mb-10 tracking-wide">Explore OneAccord</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+
+        <a href="vision.html" class="group block bg-[#FAFAF7] border border-gray-200 rounded-2xl p-8 text-center hover:shadow-lg hover:border-gold transition">
+          <div class="text-4xl mb-4">📖</div>
+          <h3 class="text-navy font-bold text-lg mb-2">The Vision</h3>
+          <p class="text-gray-500 text-sm leading-relaxed">1 Corinthians 14 & the early church pattern</p>
+        </a>
+
+        <a href="service-order.html" class="group block bg-[#FAFAF7] border border-gray-200 rounded-2xl p-8 text-center hover:shadow-lg hover:border-gold transition">
+          <div class="text-4xl mb-4">🎵</div>
+          <h3 class="text-navy font-bold text-lg mb-2">Service Order</h3>
+          <p class="text-gray-500 text-sm leading-relaxed">A visual timeline of our worship gatherings</p>
+        </a>
+
+        <a href="join.html" class="group block bg-[#FAFAF7] border border-gray-200 rounded-2xl p-8 text-center hover:shadow-lg hover:border-gold transition">
+          <div class="text-4xl mb-4">✉️</div>
+          <h3 class="text-navy font-bold text-lg mb-2">Register Interest</h3>
+          <p class="text-gray-500 text-sm leading-relaxed">Churches, pastors, and individuals welcome</p>
+        </a>
+
+        <a href="calendar.html" class="group block bg-[#FAFAF7] border border-gray-200 rounded-2xl p-8 text-center hover:shadow-lg hover:border-gold transition">
+          <div class="text-4xl mb-4">📅</div>
+          <h3 class="text-navy font-bold text-lg mb-2">Calendar</h3>
+          <p class="text-gray-500 text-sm leading-relaxed">Dates and times for June 24–26, 2026</p>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-navy text-white text-center py-10 px-6 mt-0">
+    <p class="text-gold text-2xl mb-2">🕊</p>
+    <p class="font-bold text-lg mb-1">OneAccord</p>
+    <p class="text-blue-200 text-sm italic mb-4">One Accord – In Spirit and Truth</p>
+    <p class="text-blue-300 text-xs">California Churches · June 24–26, 2026</p>
+  </footer>
+
+</body>
+</html>
